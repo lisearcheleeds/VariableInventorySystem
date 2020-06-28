@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace VariableInventory
+namespace VariableInventorySystem
 {
     public interface IVariableInventoryViewData
     {
@@ -8,7 +8,7 @@ namespace VariableInventory
 
         int? GetId(IVariableInventoryCellData cellData);
         int? GetInsertableId(IVariableInventoryCellData cellData);
-        void InsertInventoryItem(int id, VariableInventory.IVariableInventoryCellData cellData);
-        bool CheckInsert(int id, VariableInventory.IVariableInventoryCellData cellData);
+        void InsertInventoryItem(int id, VariableInventorySystem.IVariableInventoryCellData cellData);
+        bool CheckInsert(int id, VariableInventorySystem.IVariableInventoryCellData cellData);
     }
 }

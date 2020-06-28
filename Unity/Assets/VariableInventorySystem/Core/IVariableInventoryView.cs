@@ -1,7 +1,7 @@
 ﻿using System;
 using UnityEngine.EventSystems;
 
-namespace VariableInventory
+namespace VariableInventorySystem
 {
     public interface IVariableInventoryView
     {

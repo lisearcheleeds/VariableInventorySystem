@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 
-namespace VariableInventory
+namespace VariableInventorySystem
 {
     public class StandardCell : VariableInventoryCell
     {

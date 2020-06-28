@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace VariableInventory
+namespace VariableInventorySystem
 {
     public interface IVariableInventoryCellActions
     {

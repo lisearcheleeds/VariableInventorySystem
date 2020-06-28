@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-namespace VariableInventory
+namespace VariableInventorySystem
 {
     public class StandardCaseViewData : StandardStashViewData
     {
@@ -29,7 +29,7 @@ namespace VariableInventory
             return base.GetInsertableId(cellData);
         }
 
-        public override bool CheckInsert(int id, VariableInventory.IVariableInventoryCellData cellData)
+        public override bool CheckInsert(int id, VariableInventorySystem.IVariableInventoryCellData cellData)
         {
             if (cellData is IStandardCaseCellData caseData)
             {

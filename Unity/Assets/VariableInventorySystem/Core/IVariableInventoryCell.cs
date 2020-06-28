@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace VariableInventory
+namespace VariableInventorySystem
 {
     public interface IVariableInventoryCell
     {

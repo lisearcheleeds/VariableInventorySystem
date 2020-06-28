@@ -2,7 +2,7 @@
 using System.Collections;
 using UnityEngine;
 
-namespace VariableInventory
+namespace VariableInventorySystem
 {
     public class StandardAssetLoader
     {

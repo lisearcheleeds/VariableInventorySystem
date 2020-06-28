@@ -1,4 +1,4 @@
-﻿namespace VariableInventory
+﻿namespace VariableInventorySystem
 {
     public enum CellCondition
     {

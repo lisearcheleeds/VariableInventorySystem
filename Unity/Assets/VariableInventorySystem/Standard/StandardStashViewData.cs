@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-namespace VariableInventory
+namespace VariableInventorySystem
 {
     public class StandardStashViewData : IVariableInventoryViewData
     {
@@ -59,7 +59,7 @@ namespace VariableInventory
             return null;
         }
 
-        public virtual void InsertInventoryItem(int id, VariableInventory.IVariableInventoryCellData cellData)
+        public virtual void InsertInventoryItem(int id, VariableInventorySystem.IVariableInventoryCellData cellData)
         {
             CellData[id] = cellData;
             IsDirty = true;
@@ -67,7 +67,7 @@ namespace VariableInventory
             UpdateMask();
         }
 
-        public virtual bool CheckInsert(int id, VariableInventory.IVariableInventoryCellData cellData)
+        public virtual bool CheckInsert(int id, VariableInventorySystem.IVariableInventoryCellData cellData)
         {
             if (id < 0)
             {

@@ -1,7 +1,7 @@
 ﻿using System;
 using UnityEngine;
 
-namespace VariableInventory
+namespace VariableInventorySystem
 {
     public abstract class VariableInventoryCell : MonoBehaviour, IVariableInventoryCell
     {

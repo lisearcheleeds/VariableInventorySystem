@@ -1,6 +1,6 @@
-﻿using VariableInventory;
+﻿using VariableInventorySystem;
 
-namespace VariableInventory.Sample
+namespace VariableInventorySystem.Sample
 {
     public class ItemCellData : IVariableInventoryCellData
     {
@@ -17,37 +17,37 @@ namespace VariableInventory.Sample
                 case 0:
                     Width = 2;
                     Height = 1;
-                    ImageAsset = new VariableInventory.StandardAsset("Image/handgun");
+                    ImageAsset = new VariableInventorySystem.StandardAsset("Image/handgun");
                     break;
                 case 1:
                     Width = 2;
                     Height = 1;
-                    ImageAsset = new VariableInventory.StandardAsset("Image/handgun2");
+                    ImageAsset = new VariableInventorySystem.StandardAsset("Image/handgun2");
                     break;
                 case 2:
                     Width = 4;
                     Height = 2;
-                    ImageAsset = new VariableInventory.StandardAsset("Image/rifle");
+                    ImageAsset = new VariableInventorySystem.StandardAsset("Image/rifle");
                     break;
                 case 3:
                     Width = 5;
                     Height = 2;
-                    ImageAsset = new VariableInventory.StandardAsset("Image/sniper");
+                    ImageAsset = new VariableInventorySystem.StandardAsset("Image/sniper");
                     break;
                 case 4:
                     Width = 2;
                     Height = 2;
-                    ImageAsset = new VariableInventory.StandardAsset("Image/submachinegun");
+                    ImageAsset = new VariableInventorySystem.StandardAsset("Image/submachinegun");
                     break;
                 case 5:
                     Width = 2;
                     Height = 1;
-                    ImageAsset = new VariableInventory.StandardAsset("Image/handgun");
+                    ImageAsset = new VariableInventorySystem.StandardAsset("Image/handgun");
                     break;
                 case 6:
                     Width = 2;
                     Height = 1;
-                    ImageAsset = new VariableInventory.StandardAsset("Image/handgun2");
+                    ImageAsset = new VariableInventorySystem.StandardAsset("Image/handgun2");
                     break;
             }
         }

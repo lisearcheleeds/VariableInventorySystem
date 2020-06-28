@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-namespace VariableInventory
+namespace VariableInventorySystem
 {
     public class StandardStashView : MonoBehaviour, IVariableInventoryView
     {
@@ -196,7 +196,7 @@ namespace VariableInventory
             if (!StashData.CheckInsert(index.Value, effectCell.CellData))
             {
                 // check free space in case
-                if (stareCell.CellData != null && stareCell.CellData is VariableInventory.IStandardCaseCellData caseData)
+                if (stareCell.CellData != null && stareCell.CellData is VariableInventorySystem.IStandardCaseCellData caseData)
                 {
                     var id = caseData.CaseData.GetInsertableId(effectCell.CellData);
                     if (id.HasValue)
@@ -400,7 +400,7 @@ namespace VariableInventory
             {
                 // check free space in case
                 if (stareCell.CellData != null &&
-                    stareCell.CellData is VariableInventory.IStandardCaseCellData caseData &&
+                    stareCell.CellData is VariableInventorySystem.IStandardCaseCellData caseData &&
                     caseData.CaseData.GetInsertableId(effectCell.CellData).HasValue)
                 {
                     condition.color = positiveColor;

@@ -1,8 +1,8 @@
 ﻿using System.Linq;
 using UnityEngine;
-using VariableInventory;
+using VariableInventorySystem;
 
-namespace VariableInventory.Sample
+namespace VariableInventorySystem.Sample
 {
     public class CaseCellData : IStandardCaseCellData
     {
@@ -18,8 +18,8 @@ namespace VariableInventory.Sample
         {
             Width = 4;
             Height = 3;
-            ImageAsset = new VariableInventory.StandardAsset("Image/chest");
-            CaseData = new VariableInventory.StandardCaseViewData(8, 6);
+            ImageAsset = new VariableInventorySystem.StandardAsset("Image/chest");
+            CaseData = new VariableInventorySystem.StandardCaseViewData(8, 6);
         }
     }
 }

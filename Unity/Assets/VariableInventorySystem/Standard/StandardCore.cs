@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 
-namespace VariableInventory
+namespace VariableInventorySystem
 {
     public class StandardCore : VariableInventoryCore
     {

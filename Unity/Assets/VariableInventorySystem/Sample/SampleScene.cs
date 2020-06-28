@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using UnityEngine;
-using VariableInventory;
-using VariableInventory.Sample;
+using VariableInventorySystem;
+using VariableInventorySystem.Sample;
 
 public class SampleScene : MonoBehaviour
 {

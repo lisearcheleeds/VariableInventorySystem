@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-namespace VariableInventory
+namespace VariableInventorySystem
 {
     public class StandardCaseViewPopup : MonoBehaviour
     {
