@@ -226,14 +226,12 @@ namespace VariableInventorySystem
             conditionTransform.gameObject.SetActive(false);
             condition.color = defaultColor;
 
-            if (!originalId.HasValue || isDroped)
+            if (!isDroped && originalId.HasValue)
             {
-                return;
+                // revert
+                itemViews[originalId.Value].Apply(originalCellData);
+                StashData.InsertInventoryItem(originalId.Value, originalCellData);
             }
-
-            // revert
-            itemViews[originalId.Value].Apply(originalCellData);
-            StashData.InsertInventoryItem(originalId.Value, originalCellData);
 
             originalId = null;
             originalCellData = null;
