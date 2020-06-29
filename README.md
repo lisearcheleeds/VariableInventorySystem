@@ -1,5 +1,3 @@
-<img src="https://user-images.githubusercontent.com/13120364/85971583-7eea2400-ba08-11ea-91fd-2ba2590c7c80.png">
-
 # VariableInventorySystem
 <strong>VariableInventorySystem</strong> は自由なセルサイズを持つインベントリシステムです。<br /><br />
 
