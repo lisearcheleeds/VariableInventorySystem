@@ -113,9 +113,12 @@ namespace VariableInventorySystem
                     continue;
                 }
 
-                for (var w = 0; w < CellData[i].Width; w++)
+                var width = CellData[i].IsRotate ? CellData[i].Height : CellData[i].Width;
+                var height = CellData[i].IsRotate ? CellData[i].Width : CellData[i].Height;
+
+                for (var w = 0; w < width; w++)
                 {
-                    for (var h = 0; h < CellData[i].Height; h++)
+                    for (var h = 0; h < height; h++)
                     {
                         var checkIndex = i + w + (h * CapacityWidth);
                         if (checkIndex < mask.Length)
