@@ -6,3 +6,5 @@ Temp/
 *.csproj
 *.sln
 .vs/
+Assets/AssetStoreTools
+Assets/AssetStoreTools.meta
