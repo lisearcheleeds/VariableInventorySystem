@@ -7,14 +7,17 @@ public class SampleScene : MonoBehaviour
 {
     [SerializeField] StandardCore standardCore;
     [SerializeField] StandardStashView standardStashView;
-    [SerializeField] UnityEngine.UI.Button rotateButton;
+    [SerializeField] UnityEngine.UI.Button[] rotateButton;
 
     void Awake()
     {
         standardCore.Initialize();
         standardCore.AddInventoryView(standardStashView);
 
-        rotateButton.onClick.AddListener(standardCore.SwitchRotate);
+        foreach (var button in rotateButton)
+        {
+            button.onClick.AddListener(standardCore.SwitchRotate);
+        }
 
         StartCoroutine(InsertCoroutine());
     }
