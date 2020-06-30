@@ -14,8 +14,8 @@ Standardを利用した場合に開発者が行う実装は以下です<br />
 - IVariableInventoryAsset を実装したCellAssetクラスの作成<br />
 - IVariableInventoryAsset を非同期で読み込むためのLoaderクラスの作成<br /><br />
 
-最新のドキュメント
-https://docs.google.com/document/d/1hDmPfOeNtPUTgqlm44_TkWDHCkRnlV_77gpyI6CdCG0/edit?usp=sharing
+最新のドキュメント<br />
+https://docs.google.com/document/d/1hDmPfOeNtPUTgqlm44_TkWDHCkRnlV_77gpyI6CdCG0/edit?usp=sharing <br /><br />
 
-Latest Document
-https://docs.google.com/document/d/1w4u9rgpsuKNblADzEyEZAUxM7iptjvmrMwxQIbipmH8/edit?usp=sharing
+Latest Document<br />
+https://docs.google.com/document/d/1w4u9rgpsuKNblADzEyEZAUxM7iptjvmrMwxQIbipmH8/edit?usp=sharing <br /><br />
