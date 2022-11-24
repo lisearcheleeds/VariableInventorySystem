@@ -7,7 +7,7 @@ namespace VariableInventorySystem
         void SetActive(bool value);
         void SetCallback(
             Action onPointerClick,
-            Action onPointerClickOption,
+            Action onPointerOptionClick,
             Action onPointerEnter,
             Action onPointerExit,
             Action onPointerDown,
