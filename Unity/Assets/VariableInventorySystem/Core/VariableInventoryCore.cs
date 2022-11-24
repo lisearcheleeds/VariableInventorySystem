@@ -103,7 +103,7 @@ namespace VariableInventorySystem
 
             foreach (var inventoryViews in InventoryViews)
             {
-                inventoryViews.OnDroped(isRelease);
+                inventoryViews.OnDropped(isRelease);
             }
 
             effectCell.RectTransform.gameObject.SetActive(false);

@@ -221,12 +221,12 @@ namespace VariableInventorySystem
             return true;
         }
 
-        public virtual void OnDroped(bool isDroped)
+        public virtual void OnDropped(bool isDropped)
         {
             conditionTransform.gameObject.SetActive(false);
             condition.color = defaultColor;
 
-            if (!isDroped && originalId.HasValue)
+            if (!isDropped && originalId.HasValue)
             {
                 // revert
                 itemViews[originalId.Value].Apply(originalCellData);
