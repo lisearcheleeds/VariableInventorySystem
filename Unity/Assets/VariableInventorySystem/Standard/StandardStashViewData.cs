@@ -102,7 +102,7 @@ namespace VariableInventorySystem
             return true;
         }
 
-        protected void UpdateMask()
+        public void UpdateMask()
         {
             mask = new bool[CapacityWidth * CapacityHeight];
 

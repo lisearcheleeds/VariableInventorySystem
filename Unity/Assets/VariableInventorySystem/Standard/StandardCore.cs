@@ -61,6 +61,8 @@ namespace VariableInventorySystem
                 return; // Can't drop items inside a case
             stashView.StashData.CellData[id] = null;
             stashView.Apply(stashView.StashData);
+            stashView.StashData.UpdateMask();
+
         }
     }
 }
