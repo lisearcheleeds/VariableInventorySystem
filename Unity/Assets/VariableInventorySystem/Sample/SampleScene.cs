@@ -9,8 +9,6 @@ public class SampleScene : MonoBehaviour
     [SerializeField] StandardStashView standardStashView;
     [SerializeField] UnityEngine.UI.Button rotateButton;
 
-    //StandardStashViewData stashData;
-
     void Awake()
     {
         standardCore.Initialize();
