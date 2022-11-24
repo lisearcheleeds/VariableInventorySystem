@@ -9,6 +9,8 @@ public class SampleScene : MonoBehaviour
     [SerializeField] StandardStashView standardStashView;
     [SerializeField] UnityEngine.UI.Button rotateButton;
 
+    //StandardStashViewData stashData;
+
     void Awake()
     {
         standardCore.Initialize();
@@ -24,6 +26,11 @@ public class SampleScene : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.R))
         {
             standardCore.SwitchRotate();
+        }
+
+        if (Input.GetMouseButtonUp(1))
+        {
+            standardCore.RemoveInventoryItem(standardStashView);
         }
     }
 

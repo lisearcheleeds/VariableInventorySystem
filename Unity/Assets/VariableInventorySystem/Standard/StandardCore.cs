@@ -5,7 +5,6 @@ namespace VariableInventorySystem
 {
     public class StandardCore : VariableInventoryCore
     {
-        [SerializeField] StandardStashView stashView;
 
         [SerializeField] GameObject cellPrefab;
         [SerializeField] GameObject casePopupPrefab;
@@ -16,11 +15,6 @@ namespace VariableInventorySystem
         protected override RectTransform EffectCellParent => effectCellParent;
 
         protected List<IStandardCaseCellData> popupList = new List<IStandardCaseCellData>();
-
-        void Awake()
-        {
-            stashView = GetComponentInChildren<StandardStashView>();
-        }
 
         protected override void OnCellClick(IVariableInventoryCell cell)
         {
@@ -47,9 +41,9 @@ namespace VariableInventorySystem
             }
         }
 
-        protected override void OnCellOptionClick(IVariableInventoryCell cell)
+        public void RemoveInventoryItem(StandardStashView stashView)
         {
-            if (cell.CellData is IVariableInventoryCellData cellData)
+            if (stareCell.CellData is IVariableInventoryCellData cellData)
             {
                 int id = stashView.StashData.GetId(cellData) ?? default(int);
                 stashView.StashData.CellData[id] = null;
