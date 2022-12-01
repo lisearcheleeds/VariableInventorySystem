@@ -25,6 +25,11 @@ public class SampleScene : MonoBehaviour
         {
             standardCore.SwitchRotate();
         }
+
+        if (Input.GetMouseButtonUp(1))
+        {
+            standardCore.RemoveInventoryItem(standardStashView);
+        }
     }
 
     IEnumerator InsertCoroutine()

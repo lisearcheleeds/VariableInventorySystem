@@ -8,9 +8,9 @@ namespace VariableInventorySystem
 {
     public class StandardCaseView : StandardStashView
     {
-        public override void OnDroped(bool isDroped)
+        public override void OnDropped(bool isDropped)
         {
-            base.OnDroped(isDroped);
+            base.OnDropped(isDropped);
             ReApply();
         }
     }

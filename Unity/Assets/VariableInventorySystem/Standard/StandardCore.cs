@@ -5,6 +5,7 @@ namespace VariableInventorySystem
 {
     public class StandardCore : VariableInventoryCore
     {
+
         [SerializeField] GameObject cellPrefab;
         [SerializeField] GameObject casePopupPrefab;
         [SerializeField] RectTransform effectCellParent;
@@ -38,6 +39,30 @@ namespace VariableInventorySystem
                         popupList.Remove(caseData);
                     });
             }
+        }
+
+        public void RemoveInventoryItem(StandardStashView stashView)
+        {
+            if (stareCell.CellData is IStandardCaseCellData caseData)
+            {
+                Remove(stashView, caseData, true);
+            }
+
+            if (stareCell.CellData is IVariableInventoryCellData cellData)
+            {
+                Remove(stashView, cellData, false);
+            }
+        }
+        
+        private void Remove(StandardStashView stashView, IVariableInventoryCellData cellData, bool isCase)
+        {
+            int id = stashView.StashData.GetId(cellData) ?? default(int);
+            if (stashView.StashData.CellData[id] is IStandardCaseCellData && !isCase)
+                return; // Can't drop items inside a case
+            stashView.StashData.CellData[id] = null;
+            stashView.Apply(stashView.StashData);
+            stashView.StashData.UpdateMask();
+
         }
     }
 }
