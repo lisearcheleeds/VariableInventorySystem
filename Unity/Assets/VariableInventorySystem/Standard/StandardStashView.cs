@@ -15,6 +15,8 @@ namespace VariableInventorySystem
         [SerializeField] RectTransform conditionTransform;
         [SerializeField] RectTransform background;
 
+        [SerializeField] StandardButton scrollButton;
+
         [SerializeField] float holdScrollPadding;
         [SerializeField] float holdScrollRate;
 
@@ -50,8 +52,30 @@ namespace VariableInventorySystem
             this.onCellExit = onCellExit;
         }
 
+        bool init;
+        bool isDraging;
+
         public virtual void Apply(IVariableInventoryViewData data)
         {
+            if (!init)
+            {
+                scrollButton.SetCallback(
+                    () => scrollButton.gameObject.SetActive(false),
+                    null,
+                    () =>
+                    {
+                        if (isDraging)
+                        {
+                            scrollButton.gameObject.SetActive(false);
+                        }
+                    },
+                    null,
+                    null,
+                    null);
+
+                init = true;
+            }
+
             StashData = ((StandardStashViewData)data);
 
             if (itemViews == null || itemViews.Length != CellCount)
@@ -106,6 +130,7 @@ namespace VariableInventorySystem
                 return;
             }
 
+            isDraging = true;
             var (width, height) = GetRotateSize(stareCell.CellData);
             conditionTransform.sizeDelta = new Vector2(stareCell.DefaultCellSize.x * width, stareCell.DefaultCellSize.y * height);
         }
@@ -223,6 +248,9 @@ namespace VariableInventorySystem
 
         public virtual void OnDropped(bool isDropped)
         {
+            isDraging = false;
+            scrollButton.gameObject.SetActive(true);
+
             conditionTransform.gameObject.SetActive(false);
             condition.color = defaultColor;
 
